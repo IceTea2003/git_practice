@@ -1,0 +1,29 @@
+import sys
+import site
+
+def get_env_info():
+    info = {
+        "executable": sys.executable,
+        "version": sys.version,
+        "prefix": sys.prefix,
+        "site_packages": site.getsitepackages(),
+    }
+    return info
+
+if __name__ == "__main__":
+    info = get_env_info()
+    print("=" * 60)
+    print("*当前 Python 环境信息*")
+    print("=" * 60)
+    print(f"解释器路径: {info['executable']}")
+    print(f"Python 版本: {info['version'].split()[0]}")
+    print(f"环境前缀: {info['prefix']}")
+    print(f"site-packages: {info['site_packages'][0]}")
+    print("=" * 60)
+    
+    if ".venv" in info['executable']:
+        print("✅ 当前环境: 项目虚拟环境 (.venv)")
+    elif "venv" in info['executable'] or "env" in info['executable']:
+        print("✅ 当前环境: 自定义虚拟环境")
+    else:
+        print("⚠️  当前环境: 系统 Python (请谨慎操作)")
