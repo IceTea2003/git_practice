@@ -1,6 +1,5 @@
 import sys
 import site
-import os
 
 def get_env_info():
     info = {
