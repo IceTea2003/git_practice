@@ -1,6 +1,8 @@
 import sys
 import site
 
+sys.stdout.reconfigure(encoding="utf-8")
+
 def get_env_info():
     info = {
         "executable": sys.executable,
