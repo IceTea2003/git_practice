@@ -29,3 +29,8 @@ if __name__ == "__main__":
         print("✅ 当前环境: 自定义虚拟环境")
     else:
         print("⚠️  当前环境: 系统 Python (请谨慎操作)")
+        print("   原因: 直接使用系统 Python 时，pip install 会将包安装到全局 site-packages，")
+        print("         可能污染系统环境、与其他项目依赖冲突，甚至影响系统自带工具。")
+        print("   建议: 使用虚拟环境隔离依赖，例如:")
+        print("         uv venv            # 创建 .venv 虚拟环境")
+        print("         python -m venv .venv   # 或用标准库创建")

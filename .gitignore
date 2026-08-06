@@ -1,0 +1,8 @@
+# 屏幕截图
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.webp
+screenshots/
